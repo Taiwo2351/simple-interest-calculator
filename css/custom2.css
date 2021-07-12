@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: "Glegoo";
+}
+
+.jumbotron{
+  background-image: url(../images/interest1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  width: 100%;
+  height: 400px;
+  position: relative;
+ 
+
+}
+
+.jumbotron .container{
+  position: relative;
+  z-index: 999999;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}

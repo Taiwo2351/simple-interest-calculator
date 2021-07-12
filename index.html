@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Interest Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Glegoo&family=Viga&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/custom2.css">
+</head>
+<body>
+  
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <span class="navbar-brand mb-0 h1">S.I Calculator </span>
+    </div>
+  </nav>
+
+  <section class="jumbotron">
+    <div class="overlay"></div>
+    <div class="container">
+      <hi class="display-4">Calculating Simple Interest With Ease</hi>
+      <p  class="lead">Simple interest is a quick and easy method of calculating the interest charge on a loan. Simple interest is determined by multiplying the daily interest rate by the principal by the number of days that elapse between payments.</p>
+    </div>
+  </section>
+
+  <section class="container bg-dark">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="form-group">
+          <label for="principal" class="text-white">Enter the Principal Ammount: </label>
+          <input type="text" id="principal" class="form-control" onfocus="changeBgColor(this, 'gray')" onblur="changeBgColor(this, 'white')">
+        </div> >
+        </div>
+        
+
+        <div class="col-md-12  col-sm-12 col-xs-12">
+          <div class="form-group">
+            <label for="rate" class="text-white">Enter the Interest Rate: </label>
+            <input type="text" id="rate" class="form-control" onfocus="changeBgColor(this, 'gray')" onblur="changeBgColor(this, 'white')" >
+          </div>
+         </div>
+
+
+         
+         <div class="col-md-12  col-sm-12 col-xs-12">
+          <div class="form-group">
+            <label for="time" class="text-white">Enter the Time(Year(s)): </label>
+            <input type="text" id="time" class="form-control" onfocus="changeBgColor(this, 'gray')" onblur="changeBgColor(this, 'white')">
+          </div>
+      </div>
+
+
+      <div class="col-md-12  col-sm-12 col-xs-12">
+        <div class="form-group">
+          
+          <input type="button" id="btn" class="btn btn-danger" value="Submit" onclick="simpleInterest()" >
+        </div>
+    </div>
+
+
+      <div class="col-md-12  col-sm-12  col-xs-12 bg-light mb-1" id="display">
+        <h1 class="text-center text-dark">Result is displayed here...</h1>
+      </div>
+    
+   </div>
+  </section>
+
+  <script>
+function changeBgColor(element, bgColor){
+  element.style.backgroundColor = bgColor;
+}
+
+
+    function simpleInterest(){
+      let principal = document.getElementById("principal").value;
+      let rate = document.getElementById("rate").value;
+      let time = document.getElementById("time").value;
+      let result = parseFloat(principal * rate * time)/100;
+    //   let displayDiv = document.getElementById ("display");
+    //  displayDiv.innerHTML = `<h1> The S.I unit is: ${result.toFixed(2)}</h1>`;
+
+    document.getElementById ("display").innerHTML = `<h1> The S.I is:  &#8358; ${result.toFixed(2)}</h1>`;
+
+    }
+    
+  </script>
+
+</body>
+</html>
